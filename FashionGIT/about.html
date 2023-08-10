@@ -1,0 +1,245 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  </head>
+<style>
+ body{
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  .btn-danger{
+        background-color: rgb(249, 249, 249) !important;
+        transition: .5s;
+        color: black;
+    }
+    .btn-danger:hover{
+        background-color: rgb(0, 0, 0) !important;
+        color: rgb(255, 255, 255);}
+.box{
+    width: 100%;
+    height: 100vh;
+}
+.width{
+    width: 800px;
+}
+@media (max-width :810px) {
+    .width {width: 300px;}
+    
+}
+
+@media screen and (max-width: 600px) {
+      body {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+.loading {
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  background-color: #111111;
+  z-index: 200;
+}
+
+
+          
+    .loader {
+    position: relative;
+    width: 164px;
+    height: 164px;
+    margin: auto;
+  }
+  .loader::before , .loader::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    animation: rotate 1s ease-in infinite;
+}
+.loader::after {
+  width: 20px;
+  height: 20px;
+  background-color: #FF3D00;
+  animation: rotate 1s ease-in infinite, moveY 1s ease-in infinite ;
+}
+
+@keyframes moveY {
+  0% , 100% {top: 10%}
+  45% , 55% {top: 59%}
+  60% {top: 40%}
+}
+@keyframes rotate {
+  0% { transform: translate(-50%, -100%) rotate(0deg) scale(1 , 1)}
+  25%{ transform: translate(-50%, 0%) rotate(180deg) scale(1 , 1)}
+  45% , 55%{ transform: translate(-50%, 100%) rotate(180deg) scale(3 , 0.5)}
+  60%{ transform: translate(-50%, 100%) rotate(180deg) scale(1, 1)}
+  75%{ transform: translate(-50%, 0%) rotate(270deg) scale(1 , 1)}
+  100%{ transform: translate(-50%, -100%) rotate(360deg) scale(1 , 1)}
+}
+</style>
+<body>
+
+  <!--loading-->
+  <div class="loading ">
+    <span class="loader"></span>
+</div>
+
+    <!---Navbar-->
+    <nav class="navbar container navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">FashionGIT</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Shop
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="tee.html">Tee</a></li>
+                  <li><a class="dropdown-item" href="sneaker.html">Sneaker</a></li>
+                 
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="login.html">Account</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contact us.html">Contact</a>
+              </li>
+            </ul>
+            
+           
+
+                <!-- Button trigger modal -->
+          <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="bi bi-search"></i>
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Find your favourite</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-floating  mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Search what you want</label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-danger">Search</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                
+             
+          
+          </div>
+        </div>
+      </nav>
+
+
+    <div class="container box d-flex flex-column justify-content-center align-items-center  pt-5 ">
+        <div class="width">
+          <div class="width  mt-sm-5 mb-lg-2  fs-2">ABOUT Us</div>
+
+          <div class="width mb-3">
+            <p>
+              In April 1994, FashionGIT opened its doors on Lafayette Street in downtown Manhattan and became the home 
+              of New York City skate culture. 
+              At its core was a group of neighborhood kids, New York skaters, and local artists who became the store’s staff, crew, and customers.
+            </p>
+          </div>
+          <div class="width mb-5">
+            <p>
+              FashionGIT grew to embody downtown culture, and play an integral part in its constant regeneration. 
+              Skaters, punks, hip-hop heads — the young counter culture at large — all gravitated toward FashionGIT
+            </p>
+          </div>
+          
+          <div class="width mb-3">
+            <p>
+              While it developed into a downtown institution, FashionGIT established
+              itself as a brand known for its quality, style, and authenticity.
+            </p>
+          </div>
+          <div class="width mb-5">
+            <p>
+              Over 25 years, FashionGIT has expanded from its New York City origins into a global community; 
+              working with generations of artists, photographers, designers,
+              musicians, filmmakers, and writers who defied conventions and contributed to its unique identity.
+            </p>
+          </div>
+          
+         
+         
+           
+          
+        </div>
+      </div>
+
+
+
+      <hr class="container   border-2 opacity-100">
+
+<!--Footer-->
+
+      <footer class="footer bg-white text-dark mt-auto">
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Add your footer content here -->
+                <p>&copy; 2023 FashionGit Company. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <!-- Add your footer content here -->
+                <p>Contact: fashiongit@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script >
+  // for loader
+      window.addEventListener("load", ()=> {
+          document.querySelector(".loading").classList.add("d-none")
+      })
+  </script>
+</html>
